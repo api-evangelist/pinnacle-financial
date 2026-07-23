@@ -1,0 +1,43 @@
+aid: pinnacle-financial
+url: https://raw.githubusercontent.com/api-evangelist/pinnacle-financial/refs/heads/main/apis.yml
+name: Pinnacle Financial
+kind: company
+description: >-
+  Pinnacle Financial Partners, Inc. (NASDAQ: PNFP) is a Nashville, Tennessee
+  based regional bank holding company whose principal subsidiary, Pinnacle
+  Bank, is a Tennessee state-chartered, FDIC-insured commercial bank (FDIC
+  Cert #35583) originally founded in 2000 as Pinnacle National Bank and renamed
+  in 2012. Pinnacle operates across the Southeast — Tennessee, the Carolinas,
+  Virginia, Georgia and Alabama — serving consumer, small-business, commercial
+  and wealth clients. On the open-finance side Pinnacle runs NO public
+  first-party developer API portal; its consumer digital and mobile banking is
+  delivered on a third-party core/digital platform (Apiture), and
+  consumer-permissioned account and transaction data is made available to
+  fintechs only through data aggregators (Plaid and Finicity/Mastercard) rather
+  than through a documented bank-operated API. No direct Financial Data Exchange
+  (FDX) membership or published CFPB Section 1033 data-access posture was found;
+  open-finance participation is aggregator-mediated.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Financial Services
+- Banking
+- United States
+- Regional Bank
+- Open Finance
+- Data Aggregation
+created: '2026-07-23'
+modified: '2026-07-23'
+specificationVersion: '0.19'
+apis: []
+common:
+- type: Website
+  url: https://www.pnfp.com/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/pnfp/
+- type: Support
+  url: https://www.pnfp.com/contact-us/
+- type: InvestorRelations
+  url: https://investors.pnfp.com/
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

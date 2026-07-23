@@ -1,0 +1,86 @@
+aid: pinnacle-financial
+name: Pinnacle Financial
+review:
+  question: Does Pinnacle Financial expose a public first-party developer API, downloadable specs, or documented FDX / CFPB 1033 open-finance access?
+  answer: false
+  date: '2026-07-23'
+  reviewer: API Evangelist
+findings:
+  summary: |
+    Pinnacle Financial Partners (NASDAQ: PNFP), parent of the Tennessee
+    state-chartered Pinnacle Bank (FDIC Cert #35583), publishes NO public
+    first-party developer API portal and NO downloadable OpenAPI/Swagger.
+    Candidate developer hosts — developer.pnfp.com, developers.pnfp.com,
+    api.pnfp.com, apidocs.pnfp.com — resolve only via wildcard DNS to the
+    marketing site (www.pnfp.com) and fail TLS with no real developer host
+    (curl exit 35 / HTTP 000). The public marketing site (pnfp.com) returns
+    HTTP 403 to non-browser clients.
+
+    Consumer-permissioned data access is aggregator-mediated only: Plaid and
+    Finicity (Mastercard) both list coverage for Pinnacle Financial Partners,
+    which is how third parties obtain account and transaction data. There is
+    no bank-operated data-access API surface, no OAuth2/OIDC developer client
+    registration, no API-key or mTLS onboarding published by the bank itself.
+
+    No direct Financial Data Exchange (FDX) membership was found for Pinnacle,
+    and no CFPB Section 1033 personal-financial-data-rights posture is
+    published on its site. Consumer digital/mobile banking is delivered on a
+    third-party digital-banking platform (Apiture). This is the honest,
+    non-fabricated reality: an identity-only record with aggregator-only data
+    access and no first-party public API.
+  posture:
+    firstPartyDeveloperPortal: false
+    developerPortalUrl: ""
+    downloadableSpecs: false
+    fdxParticipant: false
+    cfpb1033Posture: none-published
+    aggregatorAccess:
+      - Plaid
+      - Finicity (Mastercard)
+    digitalBankingPlatform: Apiture (third-party)
+    authModel: none-first-party
+    charter: Tennessee state-chartered commercial bank (Pinnacle Bank), FDIC insured
+  transports:
+    - protocol: REST
+      scheme: https
+      documented: false
+      note: No public first-party REST API is documented by Pinnacle Financial.
+    - protocol: Aggregator
+      scheme: https
+      documented: true
+      note: Consumer-permissioned data access provided via Plaid and Finicity aggregators, not a bank-operated API.
+  probes:
+    - url: https://developer.pnfp.com
+      result: wildcard-dns-to-www; TLS failure (curl exit 35 / HTTP 000); no developer host
+    - url: https://developers.pnfp.com
+      result: wildcard-dns-to-www; no developer host
+    - url: https://api.pnfp.com
+      result: wildcard-dns-to-www; TLS failure (curl exit 35 / HTTP 000); no API host
+    - url: https://apidocs.pnfp.com
+      result: wildcard-dns-to-www; no docs host
+    - url: https://www.pnfp.com
+      httpStatus: 403
+      note: Marketing site blocks non-browser clients; no developer/API section.
+sources:
+  - url: https://www.pnfp.com/
+    type: Website
+    note: Corporate marketing site; no developer or API section. Returns 403 to non-browser clients.
+  - url: https://investors.pnfp.com/
+    type: InvestorRelations
+    note: NASDAQ PNFP corporate profile.
+  - url: https://fintable.io/coverage/banks/United%20States/22655_pinnacle-financial-partners-tn
+    type: Reference
+    note: Documents Plaid aggregator coverage for Pinnacle Financial Partners (TN).
+  - url: https://fintable.io/coverage/banks/United%20States/19478867_pinnacle-financial-partners-credit-card
+    type: Reference
+    note: Documents Finicity (Mastercard) aggregator coverage for Pinnacle credit card data.
+  - url: https://banks.data.fdic.gov/bankfind-suite/bankfind/details/35583
+    type: Reference
+    note: FDIC BankFind record for Pinnacle Bank (Cert #35583), Tennessee state charter.
+actions:
+  apisYmlUpdated: true
+  openapiHarvested: false
+  reason: |
+    No public first-party API surface exists to harvest and no downloadable
+    spec is published. apis[] left empty; record is identity-only with an
+    honest aggregator-only open-finance note. No OpenAPI written.
