@@ -30,6 +30,8 @@ modified: '2026-07-23'
 specificationVersion: '0.19'
 apis: []
 common:
+- type: DomainSecurity
+  url: security/pinnacle-financial-domain-security.yml
 - type: Website
   url: https://www.pnfp.com/
 - type: LinkedIn
@@ -38,6 +40,10 @@ common:
   url: https://www.pnfp.com/contact-us/
 - type: InvestorRelations
   url: https://investors.pnfp.com/
+- type: PrivacyPolicy
+  url: https://www.pnfp.com/privacy-practices/
+- type: LLMsTxt
+  url: llms/pinnacle-financial-llms.txt
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com

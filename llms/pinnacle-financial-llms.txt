@@ -1,0 +1,17 @@
+# Pinnacle Financial
+
+> Pinnacle Financial Partners, Inc. (NASDAQ: PNFP) is a Nashville, Tennessee based regional bank holding company whose principal subsidiary, Pinnacle Bank, is a Tennessee state-chartered, FDIC-insured commercial bank (FDIC Cert #35583). Pinnacle operates across the Southeast — Tennessee, the Carolinas, Virginia, Georgia and Alabama — serving consumer, small-business, commercial and wealth clients. Pinnacle runs NO public first-party developer API portal; consumer-permissioned account and transaction data is made available to fintechs only through data aggregators (Plaid and Finicity/Mastercard). Digital and mobile banking is delivered on a third-party core/digital platform (Apiture).
+
+## Company
+- [Website](https://www.pnfp.com/): Pinnacle Financial Partners corporate and banking site.
+- [Investor Relations](https://investors.pnfp.com/): PNFP corporate profile, filings and financials.
+- [LinkedIn](https://www.linkedin.com/company/pnfp/): Company profile.
+- [Contact / Support](https://www.pnfp.com/contact-us/): Client Service Center.
+- [Privacy Center](https://www.pnfp.com/privacy-practices/): Pinnacle digital privacy practices and CCPA notice.
+
+## Open finance posture
+- No public bank-operated developer API, OpenAPI specification, GraphQL surface or hosted MCP server was found.
+- Consumer-permissioned data access is aggregator-mediated via Plaid and Finicity/Mastercard; no direct Financial Data Exchange (FDX) membership or published CFPB Section 1033 data-access API was found.
+
+## Artifacts in this profile
+- [Domain security probe](security/pinnacle-financial-domain-security.yml): TLS/HSTS/DNSSEC/CAA/SPF/DMARC posture for pnfp.com.
