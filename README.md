@@ -1,4 +1,4 @@
-# Pinnacle Financial (pinnacle-financial)
+# Pinnacle Financial
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,44 +64,81 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Pinnacle Financial Partners, Inc. (NASDAQ: PNFP) is a Nashville, Tennessee based regional bank holding company whose principal subsidiary, Pinnacle Bank, is a Tennessee state-chartered, FDIC-insured commercial bank (FDIC Cert #35583). Founded in 2000 as Pinnacle National Bank and renamed in 2012, Pinnacle serves consumer, small-business, commercial, and wealth clients across the Southeast (Tennessee, the Carolinas, Virginia, Georgia, and Alabama).
+Pinnacle Financial Partners, Inc. (NASDAQ: PNFP) is a Nashville, Tennessee based regional bank holding company whose principal subsidiary, Pinnacle Bank, is a Tennessee state-chartered, FDIC-insured commercial bank (FDIC Cert #35583) originally founded in 2000 as Pinnacle National Bank and renamed in 2012. Pinnacle operates across the Southeast — Tennessee, the Carolinas, Virginia, Georgia and Alabama — serving consumer, small-business, commercial and wealth clients. On the open-finance side Pinnacle runs NO public first-party developer API portal; its consumer digital and mobile banking is delivered on a third-party core/digital platform (Apiture), and consumer-permissioned account and transaction data is made available to fintechs only through data aggregators (Plaid and Finicity/Mastercard) rather than through a documented bank-operated API. No direct Financial Data Exchange (FDX) membership or published CFPB Section 1033 data-access posture was found; open-finance participation is aggregator-mediated.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/pinnacle-financial/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/pinnacle-financial/refs/heads/main/apis.yml)
+**Areas:** Financial Services · Banking · United States · Regional Bank · Open Finance
 
-## Open Finance Posture
+## Pinnacle Financial on APIs.io
 
-Pinnacle Financial does **not** operate a public first-party developer API portal. Probes of the usual host patterns — `developer.pnfp.com`, `developers.pnfp.com`, `api.pnfp.com`, `apidocs.pnfp.com` — resolve only via wildcard DNS back to the marketing site (`www.pnfp.com`) with no valid developer host or certificate. There is no downloadable OpenAPI/Swagger and no self-serve API onboarding.
+Everything profiled for Pinnacle Financial is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/pinnacle-financial/](https://apis.io/providers/pinnacle-financial/)** — or go straight to one of the APIs or properties below.
 
-Consumer-permissioned account and transaction data is exposed to fintechs **only through data aggregators** — Plaid and Finicity (Mastercard) both list coverage for Pinnacle — rather than through a bank-operated API. Consumer digital and mobile banking is delivered on a third-party digital-banking platform (Apiture).
+### Published properties
 
-No direct **Financial Data Exchange (FDX)** membership and no published **CFPB Section 1033** data-access posture were found for Pinnacle. Its open-finance participation is aggregator-mediated. This is the honest, non-fabricated reality for most US regional banks.
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## Tags
+#### Security (1)
 
-- Financial Services
-- Banking
-- United States
-- Regional Bank
-- Open Finance
-- Data Aggregation
+Authentication, trust centre, and vulnerability disclosure.
 
-## Timestamps
+- [Pinnacle Financial Domain Security](https://apis.io/security/pinnacle-financial/pinnacle-financial-domain-security/)
 
-- **Created:** 2026-07-23
-- **Modified:** 2026-07-23
+## Where to find this API
 
-## APIs
-
-None. Pinnacle Financial exposes no public first-party API. Data access is aggregator-only (Plaid, Finicity).
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.pnfp.com/)
-- [LinkedIn](https://www.linkedin.com/company/pnfp/)
 - [Support](https://www.pnfp.com/contact-us/)
-- [Investor Relations](https://investors.pnfp.com/)
+- [Privacy policy](https://www.pnfp.com/privacy-practices/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 6.7** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 4.8 |
+| Access clarity | 10.5 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 7.9** — Banking & Open Finance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/pinnacle-financial/](https://apis.io/providers/pinnacle-financial/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Pinnacle Financial: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/pinnacle-financial/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
